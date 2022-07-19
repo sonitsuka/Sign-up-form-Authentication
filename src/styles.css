@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700;800;900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+  color: #fff;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(to bottom);
+}
+
+/* -- background color tric -- */
+section .color {
+  position: absolute;
+  filter: blur(150px);
+}
+
+section .color:nth-child(1) {
+  top: -280px;
+  width: 700px;
+  height: 700px;
+  background: #ff8066;
+}
+
+section .color:nth-child(2) {
+  bottom: -150px;
+  left: 100px;
+  width: 500px;
+  height: 500px;
+  background: #00c0a3;
+}
+
+section .color:nth-child(3) {
+  bottom: 50px;
+  right: 100px;
+  width: 300px;
+  height: 300px;
+  background: #3cdbc0;
+}
+
+/* -- input box -- */
+.box {
+  position: relative;
+}
+
+.form-container {
+  position: relative;
+  width: 400px;
+  min-height: 360px;
+  padding: 20px;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.form {
+  position: flex;
+  flex-direction: column;
+  width: 80%;
+  padding: 30px 0px;
+}
+
+.form h2 {
+  position: relative;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 2rem;
+  border-bottom: 4px solid #fff;
+}
+
+.form--input label {
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+.form--input input,
+button {
+  width: 100%;
+  height: 2.2rem;
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 5px 10px;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+.form--input input {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+.form--input button {
+  background: rgba(255, 255, 255, 1);
+  color: rgba(20, 20, 20, 1);
+}
+
+/* Error Msg */
+.form--input p {
+  font-weight: 100;
+  font-size: 0.8rem;
+  color: purple;
+  padding: 3px;
+  white-space: pre-wrap;
+  line-height: 1rem;
+  display: none;
+}
+
+input:invalid[focused="true"] {
+  border: 1px solid rebeccapurple;
+}
+
+input:invalid[focused="true"] ~ p {
+  display: block;
+}
+
+.form--input small {
+  width: 100%;
+  text-align: center;
+}
+/*
+.form--input input::placeholder {
+}
+.form input[type="submit"] {
+}
+*/
+
+.form--submit {
+  width: 50%;
+  padding: 10px;
+  border-radius: 5px;
+  background: #f6efef;
+  color: #4b4453;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+/* Google Btn*/
+button element.style {
+  opacity: 1;
+  background: transparent;
+}
