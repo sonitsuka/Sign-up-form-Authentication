@@ -74,8 +74,6 @@ section .color:nth-child(3) {
 }
 
 .form {
-  position: flex;
-  flex-direction: column;
   width: 80%;
   padding: 30px 0px;
 }
@@ -159,8 +157,15 @@ input:invalid[focused="true"] ~ p {
   font-weight: 600;
 }
 
-/* Google Btn*/
-button element.style {
-  opacity: 1;
-  background: transparent;
+/* social icons */
+.social-icons {
+ display: flex;
+}
+
+.loginIcon {
+  width: 36px;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 5px;
+  background: #f6efef;
 }

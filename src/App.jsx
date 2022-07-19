@@ -3,6 +3,9 @@
 import "./styles.css";
 import React, { useState } from "react";
 import FormInput from "./components/FormImput";
+import Google from "../img/google.png";
+import Facebook from "../img/facebook.png";
+import Apple from "../img/apple.png";
 // comment {/* */}
 
 export default function App() {
@@ -133,6 +136,18 @@ export default function App() {
           <small>
             <span>or, continue with</span>
           </small>
+          <div className="social-icons">
+            <a className="loginIcon google" href="/auth/google" role="button">
+              <img src ={Google} alt= "google icon" / >
+            </a>
+            <a className="loginIcon facebook" href="/auth/google" role="button">
+              <img src ={Facebook} alt= "facebook icon" / >
+            </a>
+            <a className="loginIcon apple" href="/auth/google" role="button">
+              <img src ={Apple} alt= "apple icon" / >
+            </a>
+          </div>
+          
         </div>
       </div>
     </section>
