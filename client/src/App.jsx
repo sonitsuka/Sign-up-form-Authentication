@@ -1,11 +1,11 @@
 // Form validation with React Hooks without a library. Alternative:using "useForm"
+import React, { useState } from "react";
+import FormInput from "./components/FormInput";
 
 import "./styles.css";
-import React, { useState } from "react";
-import FormInput from "./components/FormImput";
-import Google from "../img/google.png";
-import Facebook from "../img/facebook.png";
-import Apple from "../img/apple.png";
+import Google from "./img/google.png";
+import Facebook from "./img/facebook.png";
+import Apple from './img/apple.png';
 // comment {/* */}
 
 export default function App() {
@@ -13,7 +13,7 @@ export default function App() {
   /** rerendering component */
   //const usernameRef = useRef();
 
-  // best option
+  // best option for controling state
   const [values, setValues] = useState({
     username: "",
     email: "",
@@ -137,15 +137,15 @@ export default function App() {
             <span>or, continue with</span>
           </small>
           <div className="social-icons">
-            <a className="loginIcon google" href="/auth/google" role="button">
-              <img src ={Google} alt= "google icon" / >
-            </a>
-            <a className="loginIcon facebook" href="/auth/google" role="button">
+            <div className="loginIcon google" href="/auth/google" role="button">
+              <img src ={Google} alt= "google icon" className=""/ >
+            </div>
+            <div className="loginIcon facebook" href="/auth/facebook" role="button">
               <img src ={Facebook} alt= "facebook icon" / >
-            </a>
-            <a className="loginIcon apple" href="/auth/google" role="button">
+            </div>
+            <div className="loginIcon apple" href="/auth/apple" role="button">
               <img src ={Apple} alt= "apple icon" / >
-            </a>
+            </div>
           </div>
           
         </div>

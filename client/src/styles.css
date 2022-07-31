@@ -75,7 +75,7 @@ section .color:nth-child(3) {
 
 .form {
   width: 80%;
-  padding: 30px 0px;
+  padding: 15px 0px;
 }
 
 .form h2 {
@@ -153,19 +153,30 @@ input:invalid[focused="true"] ~ p {
   color: #4b4453;
   border: none;
   cursor: pointer;
-  margin-bottom: 1rem;
   font-weight: 600;
 }
 
-/* social icons */
+.form-container small {
+  margin-bottom: 1rem;
+}
+
+/* social icons Btn*/
 .social-icons {
- display: flex;
+  display: flex;
+  justify-content: space-around;
 }
 
 .loginIcon {
-  width: 36px;
-  padding: 10px;
+  padding: 8px;
   border-radius: 5px;
-  margin: 5px;
-  background: #f6efef;
+  background: rgba(255, 255, 255, 0.8);
+  display: flex;
+  text-align: center;
+  align-items: center;
+  margin: 0 20px;
+}
+
+.loginIcon img {
+  height: 28px;
+  width: 28px;
 }
