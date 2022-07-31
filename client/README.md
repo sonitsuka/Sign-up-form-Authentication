@@ -20,4 +20,7 @@ Form authentication, cookies
 ## What I learn
 
 
+
 ## Struggle points
+- Module not found: Can't resolve 'X' error in React (Install third party packages) 
+https://bobbyhadz.com/blog/react-module-not-found-cant-resolve
