@@ -46,3 +46,4 @@ passport.authenticate('google', {
     failureRedirect: '/login/failed'
 }))
 
+module.exports = router

@@ -30,6 +30,7 @@ app.use(cors({
     Credential: TURE
 }))
 
+app.use('/auth', authRoute)
 // run the server 
 app.listen('5000', ()=> {
     console.log('Server is running')
