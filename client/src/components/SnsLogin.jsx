@@ -19,11 +19,9 @@ const SnsLogin = () => {
     <div className="social-icons">
       <div
         className="loginIcon google"
-        href="/auth/google"
-        role="button"
         onClick={google}
       >
-        <img src={Google} alt="google icon" className="" />
+        <img src={Google} alt="google icon" className="icon" />
       </div>
       <div
         className="loginIcon facebook"
@@ -31,7 +29,7 @@ const SnsLogin = () => {
         role="button"
         onClick={facebook}
       >
-        <img src={Facebook} alt="facebook icon" />
+        <img src={Facebook} alt="facebook icon" className="icon" />
       </div>
       <div
         className="loginIcon apple"
@@ -39,7 +37,7 @@ const SnsLogin = () => {
         role="button"
         onClick={apple}
       >
-        <img src={Apple} alt="apple icon" />
+        <img src={Apple} alt="apple icon" className="icon" />
       </div>
     </div>
   );

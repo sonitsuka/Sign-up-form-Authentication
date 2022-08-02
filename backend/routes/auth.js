@@ -46,4 +46,10 @@ passport.authenticate('google', {
     failureRedirect: '/login/failed'
 }))
 
+// get(also post input method) Client request 
+router.get('/facebook', 
+passport.authenticate('facebook', { 
+    scope: ['profile']
+}))
+
 module.exports = router

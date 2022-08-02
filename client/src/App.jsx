@@ -1,6 +1,6 @@
 // Form validation with React Hooks without a library. Alternative:using "useForm"
 import "./styles.css";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 
 import SnsLogin from "./components/SnsLogin";
@@ -100,13 +100,30 @@ export default function App() {
     setValues({ ...values, [e.target.name]: e.target.value });
   };
 
-  // proof to login with FaceBook & Google
-  const responseGoogle = (response) => {
-    console.log(response);
-  };
-  const responseFacebook = (response) => {
-    console.log(response);
-  };
+  const [ user, setUser ] = useState()
+  useEffect(() => {
+    // fetch function
+    const getUser = async () => {
+      fetch('http://localhost:5000/auth/login/success', {
+        method: 'GET',
+        credentials: 'include',
+        headers: {
+          Acccept: 'application/json',
+          'Content-Type': 'application/json',
+          'Access-Control-Allow-Credentials': true,
+        },
+      }).then(response => {
+        if (response.status === 200)
+          return response.json()
+        throw new Error('authentication has been failed.')
+      }).then(resObj => {
+        setUser(resObj.user)
+      }).catch(err =>{
+        console.log(err)
+      })
+    }
+    getUser()
+  }, [])
 
   return (
     <section>
