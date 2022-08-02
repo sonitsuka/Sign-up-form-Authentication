@@ -7,15 +7,13 @@ const passport = require('passport')
 const authRoute = require('./routes/auth')
 const app = express()
 
-
-
-
 // Set Cookie 
 app.use(cookieSession(
-    {name:'session',
+    {
+    name:'session',
     key:['key1'],
     maxAge: 24 * 60 * 60*100
-}
+    }
 ))
 
 // Set Passport.js for authentification
@@ -31,7 +29,8 @@ app.use(cors({
 }))
 
 app.use('/auth', authRoute)
+
 // run the server 
 app.listen('5000', ()=> {
-    console.log('Server is running')
+    console.log('Server stareted on ... ')
 })
