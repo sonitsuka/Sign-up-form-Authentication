@@ -1,7 +1,14 @@
 const cookieSession = require('cookie-session')
 const express = require('express')
+const cors = require('cors')
+
+const passportSetup = require('./passport')
 const passport = require('passport')
+const authRoute = require('./routes/auth')
 const app = express()
+
+
+
 
 // Set Cookie 
 app.use(cookieSession(
@@ -18,7 +25,7 @@ app.use(passport.session())
 // Set configration 
 app.use(cors({
     // local 3000 for react server. 5000 for node
-    origin:'hettp://localhost:3000',
+    origin:'http://localhost:3000',
     methods:'GET, POST, PUT, DELETE',
     Credential: TURE
 }))
