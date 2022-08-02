@@ -1,11 +1,11 @@
 // Form validation with React Hooks without a library. Alternative:using "useForm"
-import React, { useState } from "react";
-import FormInput from "./components/FormInput";
-
 import "./styles.css";
-import Google from "./img/google.png";
-import Facebook from "./img/facebook.png";
-import Apple from './img/apple.png';
+import React, { useState } from "react";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+
+import SnsLogin from "./components/SnsLogin";
+import FormInput from "./components/FormImput";
+
 // comment {/* */}
 
 export default function App() {
@@ -13,7 +13,7 @@ export default function App() {
   /** rerendering component */
   //const usernameRef = useRef();
 
-  // best option for controling state
+  // best option
   const [values, setValues] = useState({
     username: "",
     email: "",
@@ -109,46 +109,37 @@ export default function App() {
   };
 
   return (
-    <section className="App">
+    <section>
       {/* Background Color gradient */}
       <div className="color">1</div>
       <div className="color">2</div>
       <div className="color">3</div>
       <div className="box">
         {/* form elements */}
-        <div className="form-container">
-          <div className="form">
-            <form onSubmit={handleSubmit}>
-              <h2>Login Form</h2>
-              {/* call all input forms and change the value */}
-              {inputs.map((input) => (
-                <FormInput
-                  key={input.id}
-                  {...input}
-                  value={values[input.name]}
-                  onChange={onChange}
-                />
-              ))}
-              {/*<FormInput type="text" placeholder="Last name" name="lastname" />*/}
-              <button className="form--submit">Submit</button>
-            </form>
+        <BrowserRouter>
+          <div className="form-container">
+            <div className="form">
+              <form onSubmit={handleSubmit}>
+                <h2>Login Form</h2>
+                {/* call all input forms and change the value */}
+                {inputs.map((input) => (
+                  <FormInput
+                    key={input.id}
+                    {...input}
+                    value={values[input.name]}
+                    onChange={onChange}
+                  />
+                ))}
+                {/*<FormInput type="text" placeholder="Last name" name="lastname" />*/}
+                <button className="form--submit">Submit</button>
+              </form>
+            </div>
+            <small>
+              <span>or, continue with</span>
+            </small>
+            <SnsLogin />
           </div>
-          <small>
-            <span>or, continue with</span>
-          </small>
-          <div className="social-icons">
-            <div className="loginIcon google" href="/auth/google" role="button">
-              <img src ={Google} alt= "google icon" className=""/ >
-            </div>
-            <div className="loginIcon facebook" href="/auth/facebook" role="button">
-              <img src ={Facebook} alt= "facebook icon" / >
-            </div>
-            <div className="loginIcon apple" href="/auth/apple" role="button">
-              <img src ={Apple} alt= "apple icon" / >
-            </div>
-          </div>
-          
-        </div>
+        </BrowserRouter>
       </div>
     </section>
   );
